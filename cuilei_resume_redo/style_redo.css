@@ -1,0 +1,37 @@
+/* 因为使用float，所以去除浮动 */
+
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+/* 重设标签自带样式 */
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    padding: 0;
+}
+
+li {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* 顶层导航栏样式 */
+
+.logo {
+    font-family: 'Fredoka One', cursive;
+    font-size: 30px;
+    color: #9a9da2;
+}
+
+.logo .logo-rs {
+    color: #e8676b;
+    text-transform: uppercase;
+}
