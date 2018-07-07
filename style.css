@@ -243,19 +243,22 @@ main .downloadButton:hover {
     line-height: 1.6;
 }
 
-.skills {
+section.skills,
+section.portfolio,
+.jobs {
     margin: auto;
     margin-top: 60px;
     color: #3d4450;
     max-width: 930px;
 }
 
-.skills>h2 {
+section.skills>h2,
+section.portfolio>h2 {
     font-size: 34px;
     text-align: center;
 }
 
-.skills>ol {
+section.skills>ol {
     margin: 25px 0;
     /* border: 1px solid red; */
     padding: 17px 40px 30px 40px;
@@ -268,7 +271,7 @@ ol {
     list-style: none;
 }
 
-.skills li {
+section.skills li {
     box-sizing: border-box;
     /* border: 1px solid red; */
     text-transform: uppercase;
@@ -277,26 +280,107 @@ ol {
     padding: 22px 10px 22px 10px;
 }
 
-.skills li:nth-child(even) {
+section.skills li:nth-child(even) {
     float: right;
+    padding-left: 20px;
 }
 
-.skills li h3 {
+section.skills li h3 {
     margin: 0 0 7px 0;
     font-weight: unset;
     font-size: 14px;
 }
 
-.skills .prograssBar {
+section.skills .prograssBar {
     background-color: #fae0e1;
     box-sizing: border-box;
     height: 5px;
     width: 100%;
 }
 
-.skills .prograssBar .prograss {
+section.skills .prograssBar .prograss {
     box-sizing: border-box;
     height: 100%;
     background-color: #e8656b;
     width: 70%;
+}
+
+section.portfolio {
+    text-align: center;
+}
+
+section.portfolio nav {
+    text-align: center;
+}
+
+section.portfolio ol {
+    margin: 40px 0 0 0;
+    display: inline-block;
+    /* border: 1px solid red; */
+    vertical-align: top;
+}
+
+section.portfolio li {
+    float: left;
+    text-align: center;
+    padding-bottom: 10px;
+    border-bottom: 5px solid transparent;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+section.portfolio ol :nth-child(2) {
+    margin: 0 40px;
+}
+
+section.portfolio nav {
+    display: inline-block;
+}
+
+section.portfolio nav .bar {
+    height: 5px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin-top: -5px;
+    /* border: 2.5px solid white; */
+}
+
+section.portfolio nav .bar .innerBar {
+    transition: all 0.5s;
+}
+
+section.portfolio nav .bar .innerBar.state-1 {
+    width: 10%;
+    height: 100%;
+    background-color: #e8656b;
+    border-radius: 2px;
+}
+
+section.portfolio nav .bar .innerBar.state-2 {
+    height: 100%;
+    width: 10%;
+    margin-left: 75px;
+    background-color: #e8656b;
+    border-radius: 2px;
+}
+
+section.portfolio nav .bar .innerBar.state-3 {
+    height: 100%;
+    width: 42%;
+    margin-left: 145px;
+    background-color: #e8656b;
+    border-radius: 2px;
+}
+
+.works {
+    border: 1px solid red;
+    position: relative;
+}
+
+.works .big {
+    position: absolute;
+}
+
+.works .small {
+    position: absolute;
 }
