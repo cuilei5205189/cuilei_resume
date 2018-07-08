@@ -1,3 +1,8 @@
+* {
+    box-sizing: border-box;
+    /* border: 1px solid red; */
+}
+
 /* 因为使用float，所以去除浮动 */
 
 .clearfix::after {
@@ -8,6 +13,17 @@
 
 /* 重设标签自带样式 */
 
+body {
+    background-color: #efefef;
+}
+
+body,
+ul,
+dd {
+    margin: 0;
+    padding: 0;
+}
+
 a {
     text-decoration: none;
     color: inherit;
@@ -17,21 +33,197 @@ ul {
     padding: 0;
 }
 
+h1,
+h2 {
+    margin: 0;
+    padding: 0;
+}
+
 li {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-/* 顶层导航栏样式 */
+/* 字体 */
 
-.logo {
-    font-family: 'Fredoka One', cursive;
-    font-size: 30px;
-    color: #9a9da2;
+@font-face {
+    font-family: 'Fredoka One';
+    src: url(https://fonts.gstatic.com/s/fredokaone/v5/k3kUo8kEI-tA1RRcTZGmTlHGCaen8wf-.woff2);
 }
 
-.logo .logo-rs {
+/* 顶层导航栏样式 */
+
+.topNavWrapper {
+    /* border: 1px solid red; */
+    position: relative;
+    max-width: 1566px;
+    margin: auto;
+}
+
+.topNav {
+    /* border: 1px solid red; */
+    padding: 28px 0;
+    position: absolute;
+    width: 100%;
+}
+
+.topNav .logo {
+    font-family: 'Fredoka One';
+    padding-left: 16px;
+    font-size: 30px;
+    color: #9a9da2;
+    float: left;
+}
+
+.topNav .logo .logo-rs {
     color: #e8676b;
     text-transform: uppercase;
+}
+
+.topNav .item {
+    padding-right: 16px;
+    float: right;
+}
+
+.topNav .item>li {
+    float: left;
+    padding: 10px 16px 0 16px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    font-weight: bolder;
+}
+
+.topNav .item>li:last-child {
+    /* border: 1px solid red; */
+    padding-right: 0;
+}
+
+/* 背景图 */
+
+.banner .bgImg {
+    background-image: url(../img/bgc.jpg);
+    height: 515px;
+    background-position: center center;
+    background-size: cover;
+}
+
+.banner .mask {
+    height: 515px;
+    /* border: 1px solid red; */
+    background-color: rgba(44, 51, 64, 0.8);
+}
+
+.userCard {
+    /* border: 1px solid red; */
+    max-width: 930px;
+    margin: auto;
+    background-color: white;
+    margin-top: -346px;
+}
+
+.userCard .profile {
+    padding: 44px 50px 0 50px;
+}
+
+.userCard .profile .avatar {
+    float: left;
+    /* border: 1px solid red; */
+}
+
+.userCard .profile .avatar img {
+    /* border: 1px solid red; */
+    height: 360px
+}
+
+.userCard .profile .text {
+    float: left;
+    /* border: 1px solid red; */
+    margin-left: 80px;
+    max-width: 490px;
+}
+
+.userCard .profile .text .welcome {
+    background-color: #e8676b;
+    color: white;
+    display: inline-block;
+    padding: 3px 10px;
+}
+
+.userCard .profile .text .triangle {
+    width: 0;
+    border-bottom: 10px solid transparent;
+    border-top: 10px solid transparent; 
+    border-right: 10px solid transparent; 
+    border-left: 10px solid #e8676b;
+    border-top-width: 0px;
+    margin: 0 0 0 5px;
+}
+
+.userCard .profile .text h1 {
+    font-size: 36px;
+    font-weight: 350;
+}
+
+.userCard .profile .text h2 {
+    padding: 3px 0 0 0;
+    font-size: 18px;
+    font-weight: 400;
+}
+
+.userCard .profile .text hr {
+    width: 490px;
+    margin: 15px 0 20px 0;
+    border: 0.5px solid #dedede;
+}
+
+.userCard .profile .text dl {
+    /* border: 1px solid red; */
+    font-size: 14px;
+}
+
+.userCard .profile .text dt {
+    font-size: 14px;
+    float: left;
+    padding: 8px 0;
+    width: 30%;
+    font-weight: bolder;
+}
+
+.userCard .profile .text dd {
+    padding: 8px 0;
+    float: left;
+    width: 70%;
+    color: #9da0a7;
+}
+
+.userCard .profile .text .calendar .icon {
+    height: 18px;
+    width: 18px;
+    fill: #9da0a7;
+}
+
+.userCard .profile .text .blog .icon {
+    height: 18px;
+    width: 18px;
+    fill: #9da0a7;
+}
+
+.userCard footer .iconfont {
+    background-color: #e8676b;
+    /* border: 1px solid red; */
+    text-align: center;
+    padding: 29px 0;
+}
+
+.userCard footer .iconfont a {
+    display: inline-block;
+    /* border: 1px solid red; */
+    padding: 0 20px;
+}
+
+.userCard footer .iconfont a svg {
+    fill: white;
+    width: 22px;
+    height: 22px;
 }
