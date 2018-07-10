@@ -36,12 +36,12 @@ a {
 
 .topNavBarWrapper {
     width: 100%;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     position: absolute;
 }
 
 .topNavBarWrapper .topNavBar {
-    border: 1px solid red;
+    /* border: 1px solid red; */
     max-width: 1566px;
     margin: auto;
     box-sizing: border-box;
