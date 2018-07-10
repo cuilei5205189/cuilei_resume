@@ -1,3 +1,11 @@
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 body {
     background-color: #efefef;
     color: black;
@@ -26,16 +34,23 @@ a {
     clear: both;
 }
 
-.topNavBar {
-    box-sizing: border-box;
+.topNavBarWrapper {
     width: 100%;
+    border: 1px solid red;
+    position: absolute;
+}
+
+.topNavBarWrapper .topNavBar {
+    border: 1px solid red;
+    max-width: 1566px;
+    margin: auto;
+    box-sizing: border-box;
     padding: 30px 16px 30px 16px;
-    position: fixed;
     top: 0;
     left: 0;
 }
 
-.topNavBar>nav>ul>li {
+.topNavBarWrapper .topNavBar>nav>ul>li {
     padding: 0px 18px 0 18px;
     font-size: 13px;
     float: left;
@@ -43,7 +58,7 @@ a {
     /* border: 1px solid green; */
 }
 
-.topNavBar>nav>ul>li>a {
+.topNavBarWrapper .topNavBar>nav>ul>li>a {
     display: block;
     color: #c2c4c6;
     font-weight: bold;
@@ -52,38 +67,38 @@ a {
     border-bottom: 3px solid red transparent;
 }
 
-.topNavBar>nav>ul>li>a:hover {
+.topNavBarWrapper .topNavBar>nav>ul>li>a:hover {
     border-bottom: 3px solid #dc6066;
 }
 
-.topNavBar>nav>ul {
+.topNavBarWrapper .topNavBar>nav>ul {
     margin: 0;
     padding: 0;
     /* border: 1px solid red; */
 }
 
-.topNavBar>.logo {
+.topNavBarWrapper .topNavBar>.logo {
     /* border: 1px solid red; */
     float: left;
     padding: 0 0 10px 0;
 }
 
-.topNavBar>nav {
+.topNavBarWrapper .topNavBar>nav {
     float: right;
     padding: 4px 0 5px 0;
 }
 
-.topNavBar>.logo {
+.topNavBarWrapper .topNavBar>.logo {
     font-weight: 100;
     font-size: 30px;
     font-family: 'Fredoka One';
 }
 
-.topNavBar>.logo>.rs {
+.topNavBarWrapper .topNavBar>.logo>.rs {
     color: #e8656b;
 }
 
-.topNavBar>.logo>.card {
+.topNavBarWrapper .topNavBar>.logo>.card {
     color: #9a9da2;
 }
 
@@ -100,7 +115,7 @@ a {
     background-color: rgba(44, 51, 64, 0.8);
 }
 
-.userCard {
+main .userCard {
     /* border: 1px solid red; */
     max-width: 930px;
     margin: auto;
@@ -108,7 +123,7 @@ a {
     box-shadow: 0px 1px 5px 1px rgba(150, 145, 150, 0.73);
 }
 
-.userCard .welcome {
+main .userCard .welcome {
     text-transform: uppercase;
     background-color: #e8656b;
     color: white;
@@ -123,7 +138,7 @@ a {
     text-align: center; */
 }
 
-.triangle {
+main .userCard .triangle {
     display: block;
     width: 0px;
     /* height: 200px; */
@@ -137,36 +152,36 @@ a {
     left: 9px;
 }
 
-.userCard .pictureAndText {
+main .userCard .pictureAndText {
     margin: 0 0 39px 0;
 }
 
-.userCard .picture {
+main .userCard .picture {
     margin: 57px 0 0 50px;
     float: left;
 }
 
-.userCard .text {
+main .userCard .text {
     margin: 57px 50px 0 64px;
     float: left;
     width: 460px;
 }
 
-.userCard .text h1 {
+main .userCard .text h1 {
     margin: 18px 0 5px 0;
 }
 
-.userCard .text hr {
+main .userCard .text hr {
     margin: 20px 0;
 }
 
-.userCard footer.media {
+main .userCard footer.media {
     /* border: 1px solid red; */
     background-color: #e8656b;
     text-align: center;
 }
 
-.userCard>footer.media>a {
+main .userCard>footer.media>a {
     box-sizing: border-box;
     display: inline-block;
     /* border: 1px solid red; */
@@ -178,11 +193,11 @@ a {
     margin: 19px;
 }
 
-.userCard>footer.media>a:hover {
+main .userCard>footer.media>a:hover {
     background-color: #d05b60;
 }
 
-.userCard svg {
+main .userCard svg {
     box-sizing: border-box;
     padding: 4px 0 0 0;
     width: 25px;
@@ -191,18 +206,18 @@ a {
     vertical-align: top;
 }
 
-.userCard dt,
-.userCard dd {
+main .userCard dt,
+main .userCard dd {
     float: left;
     padding: 10px 0;
 }
 
-.userCard dt {
+main .userCard dt {
     width: 30%;
     font-weight: bold;
 }
 
-.userCard dd {
+main .userCard dd {
     width: 70%;
     color: #b9bcc1
 }
@@ -234,7 +249,7 @@ main .downloadButton:hover {
     box-shadow: -3px 7px 9px -2px rgba(184, 184, 184, 1);
 }
 
-.selfIntroduction {
+main .selfIntroduction {
     text-align: center;
     max-width: 930px;
     margin: auto;
@@ -372,15 +387,32 @@ section.portfolio nav .bar .innerBar.state-3 {
     border-radius: 2px;
 }
 
-.works {
-    border: 1px solid red;
+section.portfolio .works {
+    /* border: 1px solid red; */
     position: relative;
 }
 
-.works .big {
+section.portfolio .works .big {
+    top: 0;
+    left: 0;
+    height: 576px;
     position: absolute;
+    bottom: 1px;
 }
 
-.works .small {
+section.portfolio .works :nth-child(2) {
     position: absolute;
+    /* border: 1px solid red; */
+    top: 0;
+    left: 636px;
+}
+
+section.portfolio .works :nth-child(3) {
+    position: absolute;
+    top: 298px;
+    left: 636px;
+}
+
+section.portfolio .works img {
+    vertical-align: top;
 }
