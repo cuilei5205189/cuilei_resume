@@ -52,20 +52,28 @@ li {
     src: url(https://fonts.gstatic.com/s/fredokaone/v5/k3kUo8kEI-tA1RRcTZGmTlHGCaen8wf-.woff2);
 }
 
+.icon {
+    width: 1em;
+    height: 1em;
+    vertical-align: -0.15em;
+    fill: currentColor;
+    overflow: hidden;
+}
+
 /* 顶层导航栏样式 */
 
 .topNavWrapper {
     /* border: 1px solid red; */
-    position: relative;
-    max-width: 1566px;
-    margin: auto;
+    position: fixed;
+    /* border: 1px solid red; */
+    width: 100%;
 }
 
 .topNav {
     /* border: 1px solid red; */
     padding: 28px 0;
-    position: absolute;
-    width: 100%;
+    max-width: 1566px;
+    margin: auto;
 }
 
 .topNav .logo {
@@ -153,8 +161,8 @@ li {
 .userCard .profile .text .triangle {
     width: 0;
     border-bottom: 10px solid transparent;
-    border-top: 10px solid transparent; 
-    border-right: 10px solid transparent; 
+    border-top: 10px solid transparent;
+    border-right: 10px solid transparent;
     border-left: 10px solid #e8676b;
     border-top-width: 0px;
     margin: 0 0 0 5px;
@@ -178,11 +186,14 @@ li {
 }
 
 .userCard .profile .text dl {
-    /* border: 1px solid red; */
+    box-sizing: border-box;
+    border: 1px solid red;
     font-size: 14px;
 }
 
 .userCard .profile .text dt {
+    /* box-sizing: border-box; */
+    /* border: 1px solid red; */
     font-size: 14px;
     float: left;
     padding: 8px 0;
@@ -191,9 +202,11 @@ li {
 }
 
 .userCard .profile .text dd {
+    box-sizing: border-box;
+    word-break: break-all;
     padding: 8px 0;
     float: left;
-    width: 70%;
+    width: 60%;
     color: #9da0a7;
 }
 
