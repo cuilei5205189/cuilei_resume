@@ -16,13 +16,13 @@
     <div id="loadingPage" class="loadingPage active">
         <div class="loadingAnimation"></div>
     </div>
-    <div class="topNavBarWrapper">
-        <div class="topNavBar clearfix">
+    <div id="topNavBarWrapper" class="topNavBarWrapper">
+        <div id="topNavBar" class="topNavBar clearfix">
             <a class="logo" href="#" alt="logo">
                 <span class="rs">RS</span>
                 <span class="card">card</span>
             </a>
-            <nav>
+            <nav class="menu">
                 <ul class="clearfix">
                     <li>
                         <a href="http://">关于</a>
@@ -32,12 +32,23 @@
                     </li>
                     <li>
                         <a href="http://">作品</a>
+                        <ul class="subMenu" id="subMenu">
+                            <li>作品1</li>
+                            <li>作品2</li>
+                            <li>作品3</li>
+                        </ul>
                     </li>
                     <li>
                         <a href="http://">经历</a>
                     </li>
                     <li>
                         <a href="http://">博客</a>
+                        <ul class="subMenu" id="subMenu">
+                            <li>博客1</li>
+                            <li>博客2</li>
+                            <li>博客3</li>
+                        </ul>
+
                     </li>
                     <li>
                         <a href="http://">日历</a>
@@ -189,10 +200,7 @@
                 </div>
             </div>
         </nav>
-        <br>
-        <br>
-        <br>
-        <br>
+
         <div class="works">
             <div class="big">
                 <img src="./img/photo-1422480041422-130238c67fe2-1-2-2-1-1-607x576.jpg" alt="">
@@ -205,20 +213,7 @@
             </div>
         </div>
     </section>
-    <script>
-        portfolio1.onclick = function () {
-            state.className = "innerBar state-1"
-        }
-        portfolio2.onclick = function () {
-            state.className = "innerBar state-2"
-        }
-        portfolio3.onclick = function () {
-            state.className = "innerBar state-3"
-        }
-        setTimeout(function () {
-            loadingPage.classList.remove('active')
-        },3000)
-    </script>
+    <script src="./main.js"></script>
 </body>
 
 </html>

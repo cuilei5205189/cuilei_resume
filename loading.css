@@ -22,11 +22,11 @@
     left: 0;
     right: 0;
     margin: auto;
-    height: 100px;
-    width: 100px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     animation: s 1.5s linear infinite;
-    background-color: black;
+    background-color: rgba(196, 194, 194, 0.84);
 }
 
 .loadingAnimation::after {
