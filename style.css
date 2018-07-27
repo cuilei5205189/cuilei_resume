@@ -38,6 +38,7 @@ a {
     width: 100%;
     position: fixed;
     z-index: 1;
+    transition: all 0.3s;
 }
 
 .topNavBarWrapper .topNavBar {
@@ -51,14 +52,19 @@ a {
     transition: all 0.3s;
 }
 
-.topNavBarWrapper .topNavBar.sticky {
+.topNavBarWrapper.sticky {
     background-color: white;
     padding: 10px 16px 0px 16px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
     color: rgba(61, 68, 81);
 }
 
-.topNavBarWrapper .topNavBar>nav>ul>li {
+.topNavBarWrapper .topNavBar.sticky {
+    padding: 10px 16px 0px 16px;
+    color: rgba(61, 68, 81);
+}
+
+.topNavBarWrapper .topNavBar > nav > ul > li {
     padding: 0px 18px 0 18px;
     font-size: 13px;
     float: left;
@@ -66,7 +72,7 @@ a {
     position: relative;
 }
 
-.topNavBarWrapper .topNavBar>nav>ul>li>a {
+.topNavBarWrapper .topNavBar > nav > ul > li > a {
     display: block;
     font-weight: bold;
     padding: 5px 0 5px 0;
@@ -76,7 +82,8 @@ a {
     position: relative;
 }
 
-.topNavBarWrapper .topNavBar>nav>ul>li.active>a::after {
+.topNavBarWrapper .topNavBar > nav > ul > li.active > a::after,
+.topNavBarWrapper .topNavBar > nav > ul > li.highLight > a::after {
     content: '';
     display: block;
     position: absolute;
@@ -93,12 +100,13 @@ a {
     0% {
         width: 0;
     }
+
     100% {
         width: 100%;
     }
 }
 
-.topNavBarWrapper .topNavBar li>.subMenu {
+.topNavBarWrapper .topNavBar li > .subMenu {
     position: absolute;
     right: 18px;
     top: 100%;
@@ -110,51 +118,53 @@ a {
 
 @keyframes subMenuSlide {
     0% {
-        transform: translateX(-30%)
+        transform: translateX(-30%);
     }
+
     100% {
-        transform: translateX(0)
+        transform: translateX(0);
     }
 }
 
-.topNavBarWrapper .topNavBar li.active>.subMenu {
+.topNavBarWrapper .topNavBar li.active > .subMenu {
     display: block;
-    animation: subMenuSlide .3s cubic-bezier(0, 0, 0.23, 0.99);
+    animation: subMenuSlide 0.3s cubic-bezier(0, 0, 0.23, 0.99);
 }
 
-.topNavBarWrapper .topNavBar .subMenu>li {
+.topNavBarWrapper .topNavBar .subMenu > li {
     white-space: nowrap;
     padding: 5px 10px;
 }
 
-.topNavBarWrapper .topNavBar>nav>ul {
+.topNavBarWrapper .topNavBar > nav > ul {
     margin: 0;
     padding: 0;
+
     /* border: 1px solid red; */
 }
 
-.topNavBarWrapper .topNavBar>.logo {
+.topNavBarWrapper .topNavBar > .logo {
     /* border: 1px solid red; */
     float: left;
     padding: 0 0 10px 0;
 }
 
-.topNavBarWrapper .topNavBar>nav {
+.topNavBarWrapper .topNavBar > nav {
     float: right;
     padding: 4px 0 5px 0;
 }
 
-.topNavBarWrapper .topNavBar>.logo {
+.topNavBarWrapper .topNavBar > .logo {
     font-weight: 100;
     font-size: 30px;
     font-family: 'Fredoka One';
 }
 
-.topNavBarWrapper .topNavBar>.logo>.rs {
+.topNavBarWrapper .topNavBar > .logo > .rs {
     color: #e8656b;
 }
 
-.topNavBarWrapper .topNavBar>.logo>.card {
+.topNavBarWrapper .topNavBar > .logo > .card {
     color: #9a9da2;
 }
 
@@ -188,6 +198,7 @@ main .userCard .welcome {
     line-height: 22px;
     position: relative;
     margin: 0 0 10px 0;
+
     /* width: 70px;
     height: 29px;
     line-height: 29px;
@@ -197,6 +208,7 @@ main .userCard .welcome {
 main .userCard .triangle {
     display: block;
     width: 0px;
+
     /* height: 200px; */
     border-top: 9px solid #e8656b;
     border-right: 9px solid transparent;
@@ -237,11 +249,13 @@ main .userCard footer.media {
     text-align: center;
 }
 
-main .userCard>footer.media>a {
+main .userCard > footer.media > a {
     box-sizing: border-box;
     display: inline-block;
+
     /* border: 1px solid red; */
     width: 48px;
+
     /* height: 40px; */
     line-height: 30px;
     padding: 8px 0;
@@ -249,7 +263,7 @@ main .userCard>footer.media>a {
     margin: 19px;
 }
 
-main .userCard>footer.media>a:hover {
+main .userCard > footer.media > a:hover {
     background-color: #d05b60;
 }
 
@@ -323,14 +337,15 @@ section.portfolio,
     max-width: 930px;
 }
 
-section.skills>h2,
-section.portfolio>h2 {
+section.skills > h2,
+section.portfolio > h2 {
     font-size: 34px;
     text-align: center;
 }
 
-section.skills>ol {
+section.skills > ol {
     margin: 25px 0;
+
     /* border: 1px solid red; */
     padding: 17px 40px 30px 40px;
     background-color: #fff;
@@ -344,6 +359,7 @@ ol {
 
 section.skills li {
     box-sizing: border-box;
+
     /* border: 1px solid red; */
     text-transform: uppercase;
     float: left;
@@ -367,6 +383,10 @@ section.skills .prograssBar {
     box-sizing: border-box;
     height: 5px;
     width: 100%;
+    overflow: hidden;
+}
+section.skills.offset .prograssBar .prograss {
+    transform: translateX(-100%);
 }
 
 section.skills .prograssBar .prograss {
@@ -374,7 +394,10 @@ section.skills .prograssBar .prograss {
     height: 100%;
     background-color: #e8656b;
     width: 70%;
+    transform: translateX(0);
+    transition: all 5s;
 }
+
 
 section.portfolio {
     text-align: center;
@@ -388,6 +411,7 @@ section.portfolio nav {
 section.portfolio ol {
     margin: 40px 0 0 0;
     display: inline-block;
+
     /* border: 1px solid red; */
     vertical-align: top;
 }
@@ -414,6 +438,7 @@ section.portfolio nav .bar {
     background-color: #fff;
     border-radius: 2px;
     margin-top: -5px;
+
     /* border: 2.5px solid white; */
 }
 
@@ -460,6 +485,7 @@ section.portfolio .works .big {
 
 section.portfolio .works :nth-child(2) {
     position: absolute;
+
     /* border: 1px solid red; */
     top: 0;
     left: 636px;
@@ -473,4 +499,13 @@ section.portfolio .works :nth-child(3) {
 
 section.portfolio .works img {
     vertical-align: top;
+}
+
+[data-x].offset {
+    transform: translateY(100px);
+}
+
+[data-x] {
+    transform: translateY(0);
+    transition: all 0.5s;
 }
