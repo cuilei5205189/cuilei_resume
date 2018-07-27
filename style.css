@@ -386,10 +386,6 @@ section.skills .prograssBar {
     overflow: hidden;
 }
 
-section.skills.offset .prograssBar .prograss {
-    transform: translateX(-100%);
-}
-
 section.skills li:nth-child(even) .prograssBar .prograss {
     box-sizing: border-box;
     height: 100%;
@@ -403,8 +399,13 @@ section.skills li:nth-child(odd) .prograssBar .prograss {
     box-sizing: border-box;
     height: 100%;
     background-color: #e8656b;
-    width: 70%;
+    width: 50%;
     transform: translateX(0);
+    transition: all 3s;
+}
+
+section.skills.offset li .prograssBar .prograss {
+    transform: translateX(-100%);
     transition: all 3s;
 }
 
