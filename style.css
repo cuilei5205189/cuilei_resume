@@ -385,19 +385,28 @@ section.skills .prograssBar {
     width: 100%;
     overflow: hidden;
 }
+
 section.skills.offset .prograssBar .prograss {
     transform: translateX(-100%);
 }
 
-section.skills .prograssBar .prograss {
+section.skills li:nth-child(even) .prograssBar .prograss {
+    box-sizing: border-box;
+    height: 100%;
+    background-color: #e8656b;
+    width: 80%;
+    transform: translateX(0);
+    transition: all 3s;
+}
+
+section.skills li:nth-child(odd) .prograssBar .prograss {
     box-sizing: border-box;
     height: 100%;
     background-color: #e8656b;
     width: 70%;
     transform: translateX(0);
-    transition: all 5s;
+    transition: all 3s;
 }
-
 
 section.portfolio {
     text-align: center;
@@ -502,7 +511,7 @@ section.portfolio .works img {
 }
 
 [data-x].offset {
-    transform: translateY(100px);
+    transform: translateY(80px);
 }
 
 [data-x] {

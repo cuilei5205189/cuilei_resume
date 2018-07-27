@@ -1,6 +1,14 @@
-- [x] loading animation
 
 
+# 原生js/html/css简历
+
+
+
+
+
+
+## 动画内容
+- loading animation
 - sticky navbar
 固定导航栏
 - auto highlight navbar

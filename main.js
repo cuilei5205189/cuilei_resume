@@ -12,8 +12,8 @@ portfolio3.onclick = function () {
 
 //loading
 setTimeout(() => {
-    once()
-}, 3500)
+    findClosest()
+}, 2500)
 
 
 setTimeout(function () {
