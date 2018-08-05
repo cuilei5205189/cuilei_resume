@@ -8,8 +8,10 @@
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.css">
     <script src="//at.alicdn.com/t/font_733810_hdekfvifc65.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+    <script src="./node_modules/swiper/dist/js/swiper.js"></script>
     <title>崔磊的个人简历</title>
 </head>
 
@@ -213,7 +215,31 @@
             </div>
         </div>
     </section>
-    <script src="./main.js"></script>
+    <!-- Slider main container -->
+    <div class="swiper-container">
+        <!-- Additional required wrapper -->
+        <div class="swiper-wrapper">
+            <!-- Slides -->
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/collection/190727/930x600" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/collection/190737/930x600" alt="">
+            </div>
+            <div class="swiper-slide">
+                <img src="https://source.unsplash.com/collection/190747/930x600" alt="">
+            </div>
+        </div>
+        <!-- If we need pagination -->
+        <div class="swiper-pagination"></div>
+
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+        <!-- If we need scrollbar -->
+    </div>
 </body>
+<script src="./main.js"></script>
 
 </html>

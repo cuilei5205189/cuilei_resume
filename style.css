@@ -519,3 +519,10 @@ section.portfolio .works img {
     transform: translateY(0);
     transition: all 0.5s;
 }
+
+
+.swiper-container {
+    width: 930px;
+    height: 500px;
+
+}
