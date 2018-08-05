@@ -6,12 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link href="https://fonts.googleapis.com/css?family=Fredoka+One" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="loading.css">
     <link rel="stylesheet" href="./node_modules/swiper/dist/css/swiper.css">
     <script src="//at.alicdn.com/t/font_733810_hdekfvifc65.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-    <script src="./node_modules/swiper/dist/js/swiper.js"></script>
+
+    <link rel="stylesheet" href="loading.css">
+    <link rel="stylesheet" href="style.css">
     <title>崔磊的个人简历</title>
 </head>
 
@@ -192,7 +191,7 @@
     </section>
     <section data-x id="siteWorks" class="portfolio">
         <h2>作品集</h2>
-        <nav>
+        <!-- <nav>
             <ol class="clearfix">
                 <li id="portfolio1">所有</li>
                 <li id="portfolio2">框架</li>
@@ -202,44 +201,38 @@
                 <div id="state" class="innerBar state-1">
                 </div>
             </div>
-        </nav>
-        <div class="works">
-            <div class="big">
-                <img src="./img/photo-1422480041422-130238c67fe2-1-2-2-1-1-607x576.jpg" alt="">
-            </div>
-            <div class="small">
-                <img src="./img/photo-1421757295538-9c80958e75b0-2-2-1-1-294x278.jpg" alt="">
-            </div>
-            <div class="small">
-                <img src="./img/kaboompics-1-2-1-1-294x278.jpg" alt="">
+        </nav> -->
+        <!-- Slider main container -->
+        <div class="mySlides">
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-container">
+                <!-- Additional required wrapper -->
+                <div class="swiper-wrapper">
+                    <!-- Slides -->
+                    <div class="swiper-slide">
+                        <img src="https://source.unsplash.com/collection/190727/800x600" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://source.unsplash.com/collection/190737/800x600" alt="">
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="https://source.unsplash.com/collection/190747/800x600" alt="">
+                    </div>
+                </div>
+                <div class="swiper-pagination"></div>
             </div>
         </div>
     </section>
-    <!-- Slider main container -->
-    <div class="swiper-container">
-        <!-- Additional required wrapper -->
-        <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-                <img src="https://source.unsplash.com/collection/190727/930x600" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://source.unsplash.com/collection/190737/930x600" alt="">
-            </div>
-            <div class="swiper-slide">
-                <img src="https://source.unsplash.com/collection/190747/930x600" alt="">
-            </div>
-        </div>
-        <!-- If we need pagination -->
-        <div class="swiper-pagination"></div>
-
-        <!-- If we need navigation buttons -->
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-
-        <!-- If we need scrollbar -->
-    </div>
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
+<script src="./node_modules/swiper/dist/js/swiper.js"></script>
 <script src="./main.js"></script>
+<script src="./js/init-swiper.js"></script>
+<script src="./js/auto-slide-up.js"></script>
+<script src="./js/sticky-topbar.js"></script>
+<script src="./js/smoothly-navigation.js"></script>
+<script src="./js/module-1.js"></script>
+<script src="./js/module-2.js"></script>
 
 </html>
