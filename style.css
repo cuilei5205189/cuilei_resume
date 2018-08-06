@@ -402,7 +402,7 @@ section.skills.offset li .prograssBar .prograss {
 
 section.portfolio {
     text-align: center;
-    margin-bottom: 150px;
+    margin-bottom: 60px;
 }
 
 section.portfolio nav {
@@ -514,8 +514,30 @@ section form {
     justify-content: center;
 }
 section h1 {
+    font-size: 34px;
     text-align: center;
+    margin-bottom: 20px;
 }
 section form input{
     margin: 10px;
+}
+
+section.message {
+    width: 800px;
+    margin: auto;
+}
+
+section.message .listWrapper {
+    display: flex;
+    justify-content: center;
+    background-color: #fafafa;
+    padding: 20px 0 40px 0;
+}
+section.message .listWrapper li {
+    border-bottom: 1px solid #d1d1d1;
+    padding: 15px 10px;
+    width: 300px;
+    color: #b9bcc1;
+    font-size: 15px;
+    font-weight: lighter;
 }

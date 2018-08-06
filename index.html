@@ -224,10 +224,19 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="message">
         <h1>留言</h1>
+        <div class="listWrapper">
+            <ol id="messageList">
+            </ol>
+        </div>
         <form id="formMessage" action="" method="post">
-            <input type="text" name="content" id="">
+            <label>名字
+                <input type="text" name="name" id="">
+            </label>
+            <label>内容
+                <input type="text" name="content" id="">
+            </label>
             <input type="submit" value="提交" name="content" id="">
         </form>
     </section>
