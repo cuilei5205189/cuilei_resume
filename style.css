@@ -506,3 +506,8 @@ section.portfolio .swiper-button-prev {
     left: auto;
     right: 100%;
 }
+
+section form {
+    width: 700px;
+    margin: 50px auto;
+}
