@@ -510,4 +510,12 @@ section.portfolio .swiper-button-prev {
 section form {
     width: 700px;
     margin: 50px auto;
+    display: flex;
+    justify-content: center;
+}
+section h1 {
+    text-align: center;
+}
+section form input{
+    margin: 10px;
 }
