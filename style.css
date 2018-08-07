@@ -273,6 +273,7 @@ main .userCard dt,
 main .userCard dd {
     float: left;
     padding: 10px 0;
+    line-height: 21px
 }
 
 main .userCard dt {
@@ -490,8 +491,7 @@ section.portfolio .works {
 }
 
 section.portfolio .swiper-button-next,
-section.portfolio .swiper-button-prev
-{
+section.portfolio .swiper-button-prev {
     background-color: rgba(255, 255, 255, 0.781);
     padding: 10px;
     height: 44px;
@@ -513,12 +513,14 @@ section form {
     display: flex;
     justify-content: center;
 }
+
 section h1 {
     font-size: 34px;
     text-align: center;
     margin-bottom: 20px;
 }
-section form input{
+
+section form input {
     margin: 10px;
 }
 
@@ -533,6 +535,7 @@ section.message .listWrapper {
     background-color: #fafafa;
     padding: 20px 0 40px 0;
 }
+
 section.message .listWrapper li {
     border-bottom: 1px solid #d1d1d1;
     padding: 15px 10px;
