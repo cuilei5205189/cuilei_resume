@@ -1,42 +1,18 @@
 ! function () {
-    var view = document.querySelector('section.message')
-    var model = {
-        initAV: function () {
-            var APP_ID = '2mAdlmTn6AMp3gyTXN4UIPwo-gzGzoHsz'
-            var APP_KEY = 'BxUx2BwagN6WQBPR4pRW1lgX'
-            AV.init(APP_ID, APP_KEY)
-        },
-        fetch: function () {
-            var query = new AV.Query('Message')
-            return query.find() //Promise对象
-        },
-        save: function (name, content) {
-            var Message = AV.Object.extend('Message')
-            var message = new Message()
-            return message.save({
-                'name': name,
-                'content': content
-            })
-        }
-    }
-
-
-    var controller = {
-        view: null,
-        messageList: null,
-        model: null,
-        init: function (view, model) {
-            this.view = view
+    var view = View('section.message')
+    var model = Model({
+        resourceName: 'Message',
+    })
+    var controller = Controller({
+        init: function (view,model) {
+            this.messageList = null
             this.myForm = view.querySelector('#formMessage')
             this.messageList = view.querySelector('#messageList')
-            this.model = model
-            this.model.initAV()
             this.loadMessage()
             this.bindEvents()
         },
         loadMessage: function () {
-            this.model.fetch().then((messages) => {
-                // var content = messages[1].get('content');
+            model.fetch().then((messages) => {
                 let array = messages.map((item) => item.attributes)
                 array.forEach((item) => {
                     let li = document.createElement('li')
@@ -59,8 +35,10 @@
             let myForm = this.myForm
             let content = myForm.querySelector('input[name=content]').value
             let name = myForm.querySelector('input[name=name]').value
-            this.model.save(name, content).then(function (object) {
-                // window.location.reload()
+            model.save({
+                'name': name,
+                'content': content
+            }).then(function (object) {
                 let li = document.createElement('li')
                 li.innerText = `${object.attributes.name} :  \n${object.attributes.content}`
                 messageList.appendChild(li)
@@ -69,9 +47,10 @@
                 myForm.querySelector('input[name=name]').value = ''
             })
         }
-    }
-    // 存储服务
-    controller.init(view, model)
+    })
+    controller.init(view,model)
+    console.log(controller)
+    
 }()
 
 
